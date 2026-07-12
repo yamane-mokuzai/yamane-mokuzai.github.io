@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要 | 山根木材</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: "Helvetica Neue", Arial, sans-serif; color: #333333; background-color: #fcfdfc; line-height: 1.8; }
+        header {
+            width: 100%; padding: 20px 6%; background-color: #ffffff; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
+            position: fixed; top: 0; left: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo-container { display: flex; align-items: center; text-decoration: none; color: #333333; }
+        .logo-image { height: 55px; width: auto; margin-right: 15px; }
+        .company-name { font-size: 24px; font-weight: bold; color: #1e3b29; letter-spacing: 0.15em; }
+        .since-year { font-size: 11px; color: #bfa15f; font-weight: bold; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 35px; }
+        nav ul li a { text-decoration: none; color: #555555; font-size: 15px; font-weight: 600; }
+        nav ul li a:hover { color: #1e3b29; }
+        
+        main { max-width: 1000px; margin: 140px auto 80px; padding: 0 6%; }
+        .section-title { font-size: 32px; color: #1e3b29; margin-bottom: 40px; position: relative; padding-bottom: 15px; font-weight: 700; }
+        .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40px; height: 3px; background-color: #bfa15f; }
+        
+        .info-table { width: 100%; border-collapse: collapse; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
+        .info-table th, .info-table td { padding: 22px 25px; border-bottom: 1px solid #eeeeee; text-align: left; }
+        .info-table tr:last-child th, .info-table tr:last-child td { border-bottom: none; }
+        .info-table th { width: 25%; color: #1e3b29; font-weight: bold; background-color: #f4f7f4; font-size: 15px; }
+        .info-table td { color: #555555; font-size: 15px; }
+        .business-list li { position: relative; padding-left: 18px; margin-bottom: 8px; list-style: none; }
+        .business-list li::before { content: '■'; position: absolute; left: 0; color: #bfa15f; font-size: 10px; top: 2px; }
+.page-image { 
+            width: 100%; 
+            max-width: 600px;        /* 写真の最大横幅（お好みで調整してください） */
+            height: auto;            /* 縦横比を保って縮小 */
+            display: block;          /* 中央寄せの準備 */
+            margin: 40px auto 0;     /* 上に40pxの隙間を開けて中央寄せ */
+            border-radius: 8px;      /* 角を少し丸くする */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 軽い影をつける */
+        }
+        
+        footer { background-color: #1e3b29; color: #ffffff; text-align: center; padding: 50px 20px; font-size: 14px; }
+        @media (max-width: 768px) {
+            header { flex-direction: column; padding: 15px; } nav { margin-top: 15px; } main { margin-top: 180px; }
+            .info-table th, .info-table td { display: block; width: 100%; }
+            .info-table th { padding-bottom: 8px; border-bottom: none; } .info-table td { padding-top: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="symplelogo.png" alt="山根木材 ロゴマーク" class="logo-image">
+            <div class="logo-text">
+                <span class="company-name">山根木材</span>
+                <span class="since-year">Since 1923</span>
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="about.html">木材へのこだわり</a></li>
+                <li><a href="info.html" style="color: #1e3b29; border-bottom: 2px solid #bfa15f;">会社概要</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">会社概要</h2>
+        <table class="info-table">
+            <tr><th>屋号</th><td>山根木材</td></tr>
+            <tr><th>代表者</th><td>山根 初造</td></tr>
+            <tr><th>創業</th><td>1971年（昭和46年）</td></tr>
+            <tr><th>所在地</th><td>〒503-1543 岐阜県不破郡関ケ原町今須508番地</td></tr>
+            <tr><th>電話番号</th><td>0584-43-5115</td></tr>
+            <tr><th>建設業許可</th><td>一般建設業許可</td></tr>
+            <tr>
+                <th>事業内容</th>
+                <td>
+                    <ul class="business-list">
+                        <li>建築・リフォーム</li>
+                        <li>国産材・原木の伐採および搬出</li>
+                        <li>木材加工・卸売</li>
+                        <li>林業経営</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+<!-- 変更後 -->
+<img src="photo5.jpg" alt="農林水産大臣賞の表彰状" class="page-image">
+<p style="text-align: center; font-size: 14px; color: #555555; margin-top: 15px; font-weight: bold; letter-spacing: 0.05em;">
+    <span style="color: #bfa15f; margin-right: 6px;">◆</span>農林水産大臣賞を受賞いたしました
+</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 山根木材 All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
