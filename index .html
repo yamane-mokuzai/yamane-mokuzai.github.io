@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="岐阜県不破郡関ケ原町今須の山根木材です。創業昭和46年、全国から厳選した高品質な木材（今須杉、檜）の伐採・運搬から、地域の暮らしに寄り添う丁寧なリフォーム・改築まで手掛けています。">
+    <meta name="keywords" content="山根木材,関ケ原,今須,今須杉,木材,林業,リフォーム,改築,岐阜県">
+    <title>山根木材 | 岐阜県関ケ原町の木材・リフォーム・今須杉</title>
+    <style>
+        /* ベーススタイル */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            color: #333333; background-color: #fcfdfc; line-height: 1.8;
+        }
+
+        /* ヘッダーエリア */
+        header {
+            width: 100%; padding: 20px 6%; background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
+            position: fixed; top: 0; left: 0; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo-container { display: flex; align-items: center; text-decoration: none; color: #333333; }
+        .logo-image { height: 55px; width: auto; margin-right: 15px; object-fit: contain; }
+        .logo-text { display: flex; flex-direction: column; }
+        .company-name { font-size: 24px; font-weight: bold; letter-spacing: 0.15em; color: #1e3b29; }
+        .since-year { font-size: 11px; color: #bfa15f; letter-spacing: 0.1em; margin-top: -2px; font-weight: bold; }
+        
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 35px; }
+        nav ul li a {
+            text-decoration: none; color: #555555; font-size: 15px; font-weight: 600;
+            position: relative; padding-bottom: 4px; transition: color 0.3s;
+        }
+        nav ul li a::after {
+            content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 2px;
+            background-color: #bfa15f; transition: width 0.3s;
+        }
+        nav ul li a:hover { color: #1e3b29; }
+        nav ul li a:hover::after { width: 100%; }
+
+        /* メインビジュアル（スライダー） */
+        .slider-container { margin-top: 95px; position: relative; width: 100%; height: 75vh; min-height: 500px; overflow: hidden; }
+        .slider-wrapper { display: flex; width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+        .slide {
+            flex: 0 0 100%; width: 100%; height: 100%; background-size: cover; background-position: center;
+            display: flex; justify-content: center; align-items: center; text-align: center; color: #ffffff; position: relative;
+        }
+        .slide::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; padding: 0 20px; }
+        .hero-content h1 { font-size: 48px; font-weight: 700; letter-spacing: 0.2em; text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); margin-bottom: 15px; }
+        .hero-content p { font-size: 20px; letter-spacing: 0.15em; text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5); }
+        
+        .arrow-btn {
+            position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(3px); color: white; border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 60px; height: 60px; border-radius: 50%; font-size: 24px; cursor: pointer; z-index: 10;
+            transition: all 0.3s; display: flex; justify-content: center; align-items: center;
+        }
+        .arrow-btn:hover { background: #1e3b29; border-color: #1e3b29; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .prev-btn { left: 30px; }
+        .next-btn { right: 30px; }
+
+        /* コンセプト紹介 */
+        .welcome-section { max-width: 800px; margin: 0 auto; padding: 100px 6%; text-align: center; }
+        .welcome-section h2 { font-size: 28px; color: #1e3b29; margin-bottom: 30px; letter-spacing: 0.1em; }
+        .welcome-section p { color: #555555; font-size: 16px; margin-bottom: 40px; }
+        
+        .btn-link {
+            display: inline-block; background-color: #1e3b29; color: white; text-decoration: none;
+            padding: 12px 35px; font-weight: bold; border-radius: 4px; transition: background 0.3s;
+        }
+        .btn-link:hover { background-color: #bfa15f; }
+
+        /* フッター */
+        footer { background-color: #1e3b29; color: #ffffff; text-align: center; padding: 50px 20px; font-size: 14px; }
+        footer p { opacity: 0.7; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; padding: 15px; }
+            nav { margin-top: 15px; }
+            nav ul li { margin: 0 12px; }
+            .slider-container { margin-top: 130px; height: 50vh; }
+            .hero-content h1 { font-size: 30px; }
+            .hero-content p { font-size: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="symplelogo.png" alt="山根木材 ロゴマーク" class="logo-image">
+            <div class="logo-text">
+                <span class="company-name">山根木材</span>
+                <span class="since-year">Since 1971</span>
+
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="about.html">木材へのこだわり</a></li>
+                <li><a href="info.html">事業概要</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="slider-container">
+        <button class="arrow-btn prev-btn" id="prevBtn">&#10094;</button>
+        <button class="arrow-btn next-btn" id="nextBtn">&#10095;</button>
+        <div class="slider-wrapper" id="sliderWrapper">
+            <div class="slide" style="background-image: url('hero.jpg');">
+                <div class="hero-content">
+                    <h1>自然と共生する、確かな品質</h1>
+                    <p>1971年の創業より、木とともに歩み続けています。</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('material.jpg');">
+                <div class="hero-content">
+                    <h1>厳選された国産材の温もり</h1>
+                    <p>山の息吹をそのままに、豊かな暮らしの基盤を支えます。</p>
+                </div>
+            </div>
+           <div class="slide" style="background-image: url('photo3.jpg');">
+                <div class="hero-content">
+                    <h1>豊富な施工実績</h1>
+                    <p></p>
+                </div>
+            </div>
+           <div class="slide" style="background-image: url('photo4.jpg');">
+                <div class="hero-content">
+                    <h1>職人と直接対話できる</h1>
+                    <p>お客様のご要望を直接職人にお伝えいただけます</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="welcome-section">
+            <h2>木を見つめ、未来を紡ぐ</h2>
+            <p>創業以来、山根木材は時代とともに変化する木材のニーズに応え続けてきました。確かな目利きと全国へのネットワークで、山の恵みをお客様の暮らしへとお届けします。</p>
+            <a href="about.html" class="btn-link">私たちのこだわりを見る</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 山根木材 All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const wrapper = document.getElementById('sliderWrapper');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        function updateSlider() { wrapper.style.transform = `translateX(-${currentIndex * 100}%)`; }
+        nextBtn.addEventListener('click', () => { currentIndex = (currentIndex + 1) % totalSlides; updateSlider(); });
+        prevBtn.addEventListener('click', () => { currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; updateSlider(); });
+        setInterval(() => { currentIndex = (currentIndex + 1) % totalSlides; updateSlider(); }, 5000);
+    </script>
+</body>
+</html>
